@@ -1,0 +1,129 @@
+@page {
+  size: A4;
+  margin: 12mm;
+}
+@media print {
+  .no-print { display: none !important; }
+  body { background: white; }
+}
+@media screen {
+  body { background: #f5f7fb; }
+}
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  font-size: 12px;
+  color: #1b1f24;
+}
+.sheet.a4 {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 16px auto;
+  background: white;
+  border: 1px solid #e6e8eb;
+  box-shadow: 0 6px 24px rgba(0,0,0,.06);
+  padding: 10mm;
+  display: flex;
+  flex-direction: column;
+  gap: 10mm;
+}
+
+.toolbar {
+  width: 210mm;
+  margin: 16px auto 0;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.toolbar button {
+  border: 1px solid #d0d7de;
+  background: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.toolbar button:hover { background: #f3f4f6; }
+
+.invoice-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12mm;
+  border-bottom: 2px solid #0f172a;
+  padding-bottom: 6mm;
+}
+.brand h1 { font-size: 24px; letter-spacing: 1px; margin: 0 0 2mm; }
+.brand .muted { color: #6b7280; margin: 0; }
+.meta { min-width: 60mm; }
+.meta .row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8mm;
+  padding: 2px 0;
+}
+.meta .row span { color: #6b7280; }
+.meta .row strong { font-weight: 600; }
+
+.parties {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8mm;
+}
+.parties .party h3 {
+  font-size: 13px;
+  margin: 0 0 2mm;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.parties .party p { margin: 1mm 0; }
+
+.items-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.items-table th, .items-table td {
+  border: 1px solid #d1d5db;
+  padding: 4mm 3mm;
+  vertical-align: top;
+}
+.items-table thead th {
+  background: #f2f4f8;
+  font-weight: 600;
+}
+.items-table td.center { text-align: center; }
+.items-table td.right, .items-table th.right { text-align: right; }
+.items-table .label { font-weight: 600; background: #fafafa; }
+.items-table .grand { background: #0f172a; color: #fff; }
+
+.bank-notes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8mm;
+}
+.bank-notes h3 {
+  font-size: 13px;
+  margin: 0 0 2mm;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.bank-notes p { margin: 1.5mm 0; }
+
+.invoice-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 8mm;
+  align-items: flex-end;
+  margin-top: auto;
+}
+.declaration { flex: 1; }
+.declaration p { margin: 0; }
+.sig { width: 52mm; text-align: center; }
+.sig .sig-line {
+  height: 28px;
+  border-bottom: 1px solid #111827;
+  margin: 10mm 0 4mm;
+}
+.muted { color: #6b7280; }

@@ -1,0 +1,205 @@
+@page {
+  size: A4;
+  margin: 10mm;
+}
+@media print {
+  body {
+    background: white;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  /* background: #f8f9fb; */
+  background: #d3d3d3;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  color: #222;
+}
+
+.invoice-container {
+  width: 210mm;
+  min-height: 297mm;
+  background: #fff;
+  margin: auto;
+  padding: 10mm;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+}
+
+/* ---------- Header ---------- */
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #2a5783;
+  padding-bottom: 8px;
+}
+
+.company-info h2 {
+  margin: 0;
+  color: #2a5783;
+}
+.company-info p {
+  margin: 2px 0;
+}
+
+.invoice-label {
+  text-align: right;
+}
+.logo {
+  background: #2a5783;
+  color: #fff;
+  padding: 6px 12px;
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+.tax-invoice {
+  display: block;
+  background: #0d6efd;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+/* ---------- Invoice Details ---------- */
+.invoice-details,
+.billing-shipping {
+  background: #f2f0ef;
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.billing-shipping h4 {
+  margin-bottom: 4px;
+  color: #2a5783;
+}
+hr {
+  border-color: #2a5783;
+}
+/* ---------- Items Table ---------- */
+.items-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 12px;
+}
+.items-table th,
+.items-table td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  text-align: center;
+}
+.items-table th {
+  background: #2a5783;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* ---------- Summary Section ---------- */
+.summary-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  gap: 10px;
+}
+
+.invoice-summary,
+.tax-summary {
+  background: #f2f0ef;
+
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Box header like PDF */
+.invoice-summary h4,
+.tax-summary h4 {
+  margin: 0;
+  padding: 6px 10px;
+  background: #2a5783;
+  color: #fff;
+  font-size: 13px;
+}
+
+.invoice-summary p {
+  margin: 4px 0;
+  padding: 0 10px;
+}
+.invoice-summary h4:last-child {
+  background: none;
+  color: #2a5783;
+  padding: 8px 10px 0 10px;
+}
+
+/* Tax summary inner */
+.tax-summary table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0;
+}
+.tax-summary th,
+.tax-summary td {
+  border: 1px solid #ccc;
+  padding: 4px;
+  font-size: 11px;
+  text-align: center;
+}
+
+/* Bank + QR layout */
+.bank-qr {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 10px 10px;
+}
+.bank-details {
+  flex: 1;
+}
+.qr {
+  text-align: center;
+}
+.qr img {
+  width: 90px;
+  height: 90px;
+}
+
+/* ---------- Terms ---------- */
+.terms {
+  margin-top: 12px;
+}
+.terms h4 {
+  margin: 4px 0;
+  color: #2a5783;
+}
+.terms ol {
+  margin: 0;
+  padding-left: 16px;
+}
+
+/* ---------- Signatures ---------- */
+.signatures {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+.auth-sign {
+  text-align: right;
+}
+
+/* Hide action buttons and add row button when printing */
+@media print {
+  .items-table th:last-child,
+  .items-table td:last-child,
+  .no-print {
+    display: none !important;
+  }
+}
