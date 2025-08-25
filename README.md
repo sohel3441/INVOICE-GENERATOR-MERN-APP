@@ -43,7 +43,7 @@ REACT-TEST/
 ├── README.md
 
 🚀 Running the React App
-1. git clone 
+1. git clone  https://github.com/sohel3441/INVOICE-GENERATOR-MERN-APP.git
 
 2. Install dependencies
 npm install
