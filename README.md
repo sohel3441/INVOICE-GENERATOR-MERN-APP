@@ -1,66 +1,12 @@
-📄 Invoice Template (HTML + CSS)
+# React + Vite
 
-This project is a static invoice template built using HTML + CSS.
-It is designed to look professional and print perfectly on A4 size paper.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-✨ Features
+Currently, two official plugins are available:
 
-📐 Optimized for A4 paper size
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-🎨 Clean and professional design
+## Expanding the ESLint configuration
 
-🖨️ Print-ready with a single click
-
-📋 Includes:
-
-Company information
-
-Invoice details
-
-Billing & shipping details
-
-Items table with totals
-
-Tax summary & invoice summary
-
-Bank details + UPI QR code
-
-Terms & Conditions
-
-Signature section
-
-📂 Project Structure
-.
-├── invoice.html   # Main invoice template
-├── invoice.css    # Styling for the invoice
-└── README.md      # Project documentation
-
-🚀 Getting Started
-1. Clone or Download
-
-Download the repository or copy the invoice.html and invoice.css files.
-
-2. Open in Browser
-
-Simply double-click invoice.html or open it in any web browser.
-
-3. Print / Export PDF
-
-Click the Print button at the bottom of the invoice to print it directly.
-You can also choose "Save as PDF" from the print dialog to export it.
-
-🖨️ Printing Notes
-
-Default print size is A4.
-
-Background colors and borders are preserved.
-
-Action buttons (like Print) will not appear in the printed version.
-
-🛠️ Customization
-
-Update company name, invoice details, and items directly inside invoice.html.
-
-Modify styling in invoice.css (colors, fonts, layout) as per your branding.
-
-Replace the QR code link with your own UPI / Payment QR.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
