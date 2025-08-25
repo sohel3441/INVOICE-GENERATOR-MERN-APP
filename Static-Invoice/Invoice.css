@@ -33,6 +33,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center; /* ✅ Center text */
   border-bottom: 2px solid #2a5783;
   padding-bottom: 8px;
 }
@@ -46,8 +47,12 @@ body {
 }
 
 .invoice-label {
-  text-align: right;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; ✅ Center TAX INVOICE text under logo */
+  margin-top: 5px;
 }
+
 .logo {
   background: #2a5783;
   color: #fff;
@@ -57,9 +62,13 @@ body {
   display: inline-block;
   margin-bottom: 4px;
 }
+.m {
+  font-size: 40px;
+  font-weight: bold;
+}
 .tax-invoice {
   display: block;
-  background: #0d6efd;
+  background: #2a5783;
   color: #fff;
   padding: 4px 8px;
   font-size: 12px;
@@ -68,12 +77,21 @@ body {
 /* ---------- Invoice Details ---------- */
 .invoice-details,
 .billing-shipping {
-  background: #f2f0ef;
+  /* background: #f2f0ef; */
+  background: #f9f9f9;
+
+  margin-top: 4px;
   display: flex;
   justify-content: space-between;
-  margin: 8px 0;
-  padding: 8px;
+  /* text-align: center; */
+  /* align-items: center; */
+  /* margin: 4px 0; */
+  /* padding: 8px; */
   border: 1px solid #ddd;
+}
+
+.bill-info {
+  color: #2a5783;
 }
 
 .billing-shipping h4 {
@@ -90,16 +108,44 @@ hr {
   margin-top: 10px;
   font-size: 12px;
 }
-.items-table th,
+.items-table th {
+  color: #2a5783;
+  /* // Show the th in center */
+  text-align: center;
+}
 .items-table td {
   border: 1px solid #ccc;
-  padding: 6px;
+  /* padding: 4; */
   text-align: center;
 }
 .items-table th {
-  background: #2a5783;
-  color: #fff;
+  /* background: #2a5783;
+  color: #fff; */
   font-weight: bold;
+}
+
+.items-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.items-table th,
+.items-table td {
+  padding: 4px;
+  border: none; /* ❌ remove all borders */
+  border-bottom: 1px solid #ddd; /* ✅ only row separator */
+}
+
+.items-table thead th {
+  background: #f8f9fa; /* light header background */
+  font-weight: bold;
+  border-bottom: 2px solid #ddd; /* slightly thicker header line */
+}
+
+.items-table tfoot td {
+  font-weight: bold;
+  border-top: 2px solid #ddd;
 }
 
 /* ---------- Summary Section ---------- */
@@ -112,7 +158,8 @@ hr {
 
 .invoice-summary,
 .tax-summary {
-  background: #f2f0ef;
+  /* background: #f2f0ef; */
+  background: #f9f9f9;
 
   flex: 1;
   border: 1px solid #ddd;
@@ -173,24 +220,40 @@ hr {
 }
 
 /* ---------- Terms ---------- */
-.terms {
-  margin-top: 12px;
+/* Container for both sections */
+.terms-signatures {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
+
+/* Terms block */
+.terms {
+  width: 60%; /* keep terms on left */
+}
+
 .terms h4 {
   margin: 4px 0;
   color: #2a5783;
 }
+
 .terms ol {
-  margin: 0;
+  /* margin: 0; */
   padding-left: 16px;
 }
 
-/* ---------- Signatures ---------- */
-.signatures {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 16px;
+.terms ol li {
+  margin: 10px;
 }
+
+/* Signatures block */
+.signatures {
+  width: 35%; /* right side */
+  text-align: right;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 .auth-sign {
   text-align: right;
 }
@@ -203,3 +266,9 @@ hr {
     display: none !important;
   }
 }
+
+/* .terms-signatures {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+} */
