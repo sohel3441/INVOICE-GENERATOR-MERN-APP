@@ -1,66 +1,82 @@
-📄 Invoice Template (HTML + CSS)
+📄 Invoice Project (React + Static HTML)
 
-This project is a static invoice template built using HTML + CSS.
-It is designed to look professional and print perfectly on A4 size paper.
+This repository contains two implementations of an Invoice Template:
+
+⚛️ React App (dynamic invoice with edit/add row features) – inside src/
+
+📑 Static HTML Invoice (print-ready) – inside Static-Invoice/
 
 ✨ Features
 
-📐 Optimized for A4 paper size
+React Version
 
-🎨 Clean and professional design
+Editable invoice items
 
-🖨️ Print-ready with a single click
+Add / Update rows
 
-📋 Includes:
+Save to local storage
 
-Company information
+Print option
 
-Invoice details
+Static Version
 
-Billing & shipping details
+Pure HTML + CSS invoice
 
-Items table with totals
+Optimized for A4 printing
 
-Tax summary & invoice summary
+Clean, professional design
 
-Bank details + UPI QR code
-
-Terms & Conditions
-
-Signature section
+Print button included
 
 📂 Project Structure
-.
-├── invoice.html   # Main invoice template
-├── invoice.css    # Styling for the invoice
-└── README.md      # Project documentation
+REACT-TEST/
+├── node_modules/
+├── public/
+├── src/                # React code (dynamic invoice)
+├── Static-Invoice/     # Static HTML + CSS invoice
+│   ├── invoice.html
+│   ├── invoice.css
+├── .gitignore
+├── index.html
+├── package.json
+├── vite.config.js
+├── README.md
 
-🚀 Getting Started
-1. Clone or Download
+🚀 Running the React App
+1. git clone 
 
-Download the repository or copy the invoice.html and invoice.css files.
+2. Install dependencies
+npm install
 
-2. Open in Browser
+3. Start development server
+npm run dev
 
-Simply double-click invoice.html or open it in any web browser.
 
-3. Print / Export PDF
+This will start the React app (usually at http://localhost:5173/
+).
 
-Click the Print button at the bottom of the invoice to print it directly.
-You can also choose "Save as PDF" from the print dialog to export it.
+📑 Using the Static Invoice
+
+Navigate to the Static-Invoice/ folder:
+
+cd Static-Invoice
+
+
+Open invoice.html in your browser (Chrome / Edge / Firefox).
+
+👉 You can print it directly or Save as PDF.
+👉 All styles are inside invoice.css.
 
 🖨️ Printing Notes
 
-Default print size is A4.
+Default size: A4
 
-Background colors and borders are preserved.
+Action buttons (Save/Print) will not appear in printout
 
-Action buttons (like Print) will not appear in the printed version.
+Background colors and borders are preserved
 
 🛠️ Customization
 
-Update company name, invoice details, and items directly inside invoice.html.
+React App → update components inside src/
 
-Modify styling in invoice.css (colors, fonts, layout) as per your branding.
-
-Replace the QR code link with your own UPI / Payment QR.
+Static Invoice → edit invoice.html & invoice.css
